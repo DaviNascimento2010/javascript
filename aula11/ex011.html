@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Nacionalidade</title>
+    <Style>
+        body {
+            font: normal 15pt Arial;
+            color: white;
+            background-color: rgb(44, 44, 44);
+        }
+        h1 {
+            font: normal 30pt Arial;
+            color: royalblue;
+        }
+    </Style>
+</head>
+<body>
+    <h1>Desafio Nacionalidade</h1>
+    Diga o seu país de origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="nacionalidade()">
+    <div id="d">
+
+    </div>
+    <script>
+        function nacionalidade() {
+            var txtp = window.document.querySelector('input#txtpais')
+            var d = window.document.querySelector('div#d')
+            var pais = txtp.value.toUpperCase()
+
+            if (pais == 'BRASIL') {
+                d.innerHTML = '<p>Você é <strong>brasileiro(a)</strong></p>'
+            } else {
+                d.innerHTML =  '<p>Você é <strong>estrangeiro(a)</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
